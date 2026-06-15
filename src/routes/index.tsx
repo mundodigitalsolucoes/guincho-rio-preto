@@ -102,7 +102,7 @@ const faqs = [
   { q: "Vocês guincham motos?", a: "Sim. Temos estrutura específica para transporte de motos com total segurança, de scooter a esportiva." },
   { q: "Atendem quais regiões?", a: "São José do Rio Preto e cidades da região. Também fazemos transporte intermunicipal sob consulta." },
   { q: "O atendimento é feito pelo WhatsApp?", a: "Sim. O canal mais rápido é o WhatsApp 17 99623-8858. Também atendemos por ligação." },
-  { q: "Vocês fazem transporte com plataforma?", a: "Sim. Trabalhamos com guincho plataforma e asa delta, ideal para SUVs, importados e veículos baixos." },
+  { q: "Vocês atendem em rodovias?", a: "Sim. Atendemos rodovias da região com agilidade e segurança, 24h por dia." },
   { q: "Quanto tempo demora para chegar?", a: "Na cidade de Rio Preto, o tempo médio de chegada é entre 15 e 30 minutos, dependendo da localização." },
 ];
 
