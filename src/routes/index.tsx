@@ -225,7 +225,7 @@ function Page() {
 
         <section className="py-20">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <SectionTitle eyebrow="SEO local" title="Guincho em São José do Rio Preto 24 Horas" />
+            <SectionTitle title="Guincho em São José do Rio Preto 24 Horas" />
             <p className="text-lg text-muted-foreground">Se você precisa de guincho em São José do Rio Preto, guincho 24 horas Rio Preto, guincho para moto, guincho para carro, socorro automotivo, guincho plataforma ou remoção de veículos, fale com o Guincho Rio Preto pelo WhatsApp.</p>
           </div>
         </section>
@@ -305,7 +305,12 @@ function Footer() {
         </div>
         <div><h4 className="font-display text-lg font-bold uppercase text-primary">Atendemos</h4><p className="mt-3 text-sm text-white/80">São José do Rio Preto e toda a região. Guincho para carro e moto, socorro automotivo e remoção 24h.</p></div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-center text-xs text-white/60">© {new Date().getFullYear()} Guincho Rio Preto — Todos os direitos reservados.</div>
+      <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-6 text-center text-xs text-white/60">
+        <div>© {new Date().getFullYear()} Guincho Rio Preto — Todos os direitos reservados.</div>
+        <div className="mt-2">
+          Criado por <a href="https://mundodigitalsolucoes.com.br/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary transition hover:text-white">Mundo Digital Soluções</a>
+        </div>
+      </div>
     </footer>
   );
 }
