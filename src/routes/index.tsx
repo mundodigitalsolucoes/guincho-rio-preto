@@ -408,7 +408,7 @@ function Footer() {
         <div>
           <h4 className="font-display text-lg font-bold uppercase text-primary">Atendemos</h4>
           <p className="mt-3 text-sm text-white/80">
-            São José do Rio Preto e toda a região. Guincho para carro e moto, plataforma, asa delta e socorro 24h.
+            São José do Rio Preto e toda a região. Guincho para carro e moto, socorro automotivo e remoção 24h.
           </p>
         </div>
       </div>
