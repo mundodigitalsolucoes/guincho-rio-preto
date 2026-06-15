@@ -74,11 +74,10 @@ const trust = [
 const services = [
   { icon: Car, title: "Guincho para carro", desc: "Remoção segura para qualquer modelo de carro." },
   { icon: Bike, title: "Guincho para moto", desc: "Transporte especializado para motos e scooters." },
-  { icon: Truck, title: "Guincho plataforma", desc: "Plataforma para veículos baixos, importados e SUV." },
-  { icon: Zap, title: "Guincho asa delta", desc: "Para situações onde a plataforma não atende." },
   { icon: AlertTriangle, title: "Socorro 24 horas", desc: "Pane, acidente ou emergência a qualquer hora." },
   { icon: Wrench, title: "Remoção de veículos", desc: "Remoção rápida e organizada em qualquer local." },
 ];
+
 
 const whenCall = [
   { icon: Wrench, title: "Pane mecânica", desc: "Carro parou no meio do caminho? A gente busca." },
