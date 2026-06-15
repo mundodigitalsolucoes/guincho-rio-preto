@@ -7,6 +7,14 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  vite: {
+    preview: {
+      allowedHosts: [
+        "lollyuoz5x8swg0vydhmid6j.76.13.226.201.sslip.io",
+        ".sslip.io",
+      ],
+    },
+  },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
