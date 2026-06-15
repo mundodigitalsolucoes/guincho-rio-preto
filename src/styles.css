@@ -92,3 +92,27 @@
   100% { box-shadow: 0 0 0 0 oklch(0.68 0.17 150 / 0); }
 }
 .animate-pulse-ring { animation: pulse-ring 2s infinite; }
+
+@keyframes truck-drive {
+  0% { transform: translateX(-3%) translateY(0); }
+  50% { transform: translateX(2%) translateY(-4px); }
+  100% { transform: translateX(-3%) translateY(0); }
+}
+.animate-truck-drive { animation: truck-drive 4s ease-in-out infinite; }
+
+@keyframes road-dash {
+  from { background-position: 0 0; }
+  to { background-position: -200px 0; }
+}
+.animate-road-dash {
+  background-image: repeating-linear-gradient(90deg, oklch(1 0 0 / 0.6) 0 40px, transparent 40px 80px);
+  animation: road-dash 0.8s linear infinite;
+}
+
+@keyframes speed-lines {
+  0% { transform: translateX(0); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: translateX(-120%); opacity: 0; }
+}
+.animate-speed-line { animation: speed-lines 1.2s linear infinite; }
+
