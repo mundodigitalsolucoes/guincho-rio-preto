@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Clock, Shield, MapPin, CreditCard, Bike, Car, Truck, AlertTriangle,
-  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle, Zap,
+  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
 import { Header } from "@/components/site/header";
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "guincho rio preto, guincho 24 horas, guincho são josé do rio preto, guincho para moto, guincho para carro, socorro automotivo, guincho plataforma, guincho asa delta" },
+      { name: "keywords", content: "guincho rio preto, guincho 24 horas, guincho são josé do rio preto, guincho para moto, guincho para carro, socorro automotivo, remoção de veículos" },
       { name: "robots", content: "index,follow" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
@@ -74,11 +74,10 @@ const trust = [
 const services = [
   { icon: Car, title: "Guincho para carro", desc: "Remoção segura para qualquer modelo de carro." },
   { icon: Bike, title: "Guincho para moto", desc: "Transporte especializado para motos e scooters." },
-  { icon: Truck, title: "Guincho plataforma", desc: "Plataforma para veículos baixos, importados e SUV." },
-  { icon: Zap, title: "Guincho asa delta", desc: "Para situações onde a plataforma não atende." },
   { icon: AlertTriangle, title: "Socorro 24 horas", desc: "Pane, acidente ou emergência a qualquer hora." },
   { icon: Wrench, title: "Remoção de veículos", desc: "Remoção rápida e organizada em qualquer local." },
 ];
+
 
 const whenCall = [
   { icon: Wrench, title: "Pane mecânica", desc: "Carro parou no meio do caminho? A gente busca." },
@@ -103,7 +102,7 @@ const faqs = [
   { q: "Vocês guincham motos?", a: "Sim. Temos estrutura específica para transporte de motos com total segurança, de scooter a esportiva." },
   { q: "Atendem quais regiões?", a: "São José do Rio Preto e cidades da região. Também fazemos transporte intermunicipal sob consulta." },
   { q: "O atendimento é feito pelo WhatsApp?", a: "Sim. O canal mais rápido é o WhatsApp 17 99623-8858. Também atendemos por ligação." },
-  { q: "Vocês fazem transporte com plataforma?", a: "Sim. Trabalhamos com guincho plataforma e asa delta, ideal para SUVs, importados e veículos baixos." },
+  { q: "Vocês atendem em rodovias?", a: "Sim. Atendemos rodovias da região com agilidade e segurança, 24h por dia." },
   { q: "Quanto tempo demora para chegar?", a: "Na cidade de Rio Preto, o tempo médio de chegada é entre 15 e 30 minutos, dependendo da localização." },
 ];
 
@@ -114,8 +113,22 @@ function Page() {
       <main id="inicio" className="pt-[72px]">
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-hero text-white">
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: `url(${images.truck})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+          {/* Speed lines for motion feeling */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <span
+                key={i}
+                className="animate-speed-line absolute h-[2px] rounded-full bg-white/70"
+                style={{
+                  top: `${10 + i * 11}%`,
+                  width: `${30 + (i % 4) * 15}%`,
+                  right: 0,
+                  animationDelay: `${(i * 0.15).toFixed(2)}s`,
+                }}
+              />
+            ))}
+          </div>
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-secondary/70 to-transparent" />
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
             <div className="flex flex-col justify-center">
               <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary shadow-card">
@@ -139,15 +152,23 @@ function Page() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="absolute -inset-4 rounded-3xl bg-secondary/40 blur-2xl" />
-              <img src={images.truck} alt="Guincho plataforma transportando veículo em Rio Preto" className="relative rounded-3xl object-cover shadow-brand" />
-              <div className="absolute -bottom-6 -left-6 rotate-[-4deg] rounded-2xl bg-secondary px-6 py-4 shadow-brand">
+              <img
+                src={images.truck}
+                alt="Caminhão guincho Rio Preto transportando veículo"
+                className="animate-truck-drive relative z-10 w-full drop-shadow-[0_25px_25px_rgba(0,0,0,0.4)]"
+              />
+              {/* Animated road */}
+              <div className="animate-road-dash absolute bottom-6 left-0 right-0 h-1 rounded-full opacity-80" />
+              {/* Motion blur trail */}
+              <div aria-hidden className="absolute bottom-8 left-0 h-16 w-32 -translate-x-4 rounded-full bg-white/20 blur-2xl" />
+              <div className="absolute -bottom-2 -left-2 z-20 rotate-[-4deg] rounded-2xl bg-secondary px-6 py-4 shadow-brand">
                 <div className="font-display text-3xl font-black leading-none text-primary">SOS</div>
                 <div className="font-display text-sm font-bold text-white">24 HORAS</div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* TRUST */}
         <section className="bg-muted/40 py-14">
@@ -214,8 +235,9 @@ function Page() {
           <div className="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
             <div className="grid grid-cols-2 gap-4">
               <img src={images.moto} alt="Guincho transportando moto em Rio Preto" className="aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
-              <img src={images.suv} alt="Guincho asa delta atendendo SUV" className="mt-8 aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
+              <img src={images.carNight} alt="Guincho atendendo carro à noite em Rio Preto" className="mt-8 aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
             </div>
+
             <div>
               <SectionTitle align="left" eyebrow="Sobre nós" title="Confiança e agilidade quando você mais precisa" />
               <p className="text-lg text-muted-foreground">
@@ -268,7 +290,7 @@ function Page() {
           <div className="mx-auto max-w-4xl px-4 text-center">
             <SectionTitle eyebrow="Atendimento local" title="Guincho em São José do Rio Preto 24 Horas" />
             <p className="text-lg leading-relaxed text-muted-foreground text-balance">
-              Procurando <strong className="text-foreground">guincho em São José do Rio Preto</strong>? A Guincho Rio Preto é referência em <strong className="text-foreground">guincho 24 horas Rio Preto</strong>, com serviço de <strong className="text-foreground">guincho para moto</strong>, <strong className="text-foreground">guincho para carro</strong>, <strong className="text-foreground">socorro automotivo</strong>, <strong className="text-foreground">guincho plataforma</strong> e <strong className="text-foreground">guincho asa delta</strong>. Atendemos toda a região com agilidade e segurança, todos os dias, a qualquer hora.
+              Procurando <strong className="text-foreground">guincho em São José do Rio Preto</strong>? A Guincho Rio Preto é referência em <strong className="text-foreground">guincho 24 horas Rio Preto</strong>, com serviço de <strong className="text-foreground">guincho para moto</strong>, <strong className="text-foreground">guincho para carro</strong>, <strong className="text-foreground">socorro automotivo</strong> e <strong className="text-foreground">remoção de veículos</strong>. Atendemos toda a região com agilidade e segurança, todos os dias, a qualquer hora.
             </p>
             <div className="mt-8">
               <WhatsAppButton size="lg" label="Falar com a equipe agora" event="cta_click" />
@@ -386,7 +408,7 @@ function Footer() {
         <div>
           <h4 className="font-display text-lg font-bold uppercase text-primary">Atendemos</h4>
           <p className="mt-3 text-sm text-white/80">
-            São José do Rio Preto e toda a região. Guincho para carro e moto, plataforma, asa delta e socorro 24h.
+            São José do Rio Preto e toda a região. Guincho para carro e moto, socorro automotivo e remoção 24h.
           </p>
         </div>
       </div>
