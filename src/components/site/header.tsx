@@ -32,13 +32,13 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-        <a href="#inicio" className="flex min-w-0 items-center gap-3">
-          <img src={images.logo} alt="Guincho Rio Preto" className="h-12 w-12 shrink-0 rounded-lg object-cover" />
-          <div className="hidden min-w-0 sm:block">
-            <div className="font-display text-xl font-bold leading-none text-white">GUINCHO</div>
-            <div className="font-display text-sm font-bold leading-none text-primary">RIO PRETO</div>
-          </div>
-        </a>
+        <a href="#inicio" className="flex min-w-0 items-center">
+  <img
+    src={images.logo}
+    alt="Guincho Rio Preto"
+    className="h-14 w-auto max-w-[180px] object-contain"
+  />
+</a>
 
         <nav className="hidden items-center gap-7 lg:flex">
           {links.map((l) => (
