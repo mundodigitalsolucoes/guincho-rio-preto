@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Clock, Shield, MapPin, CreditCard, Bike, Car, Truck, AlertTriangle,
-  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle, Zap,
+  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle,
 } from "lucide-react";
 import { useState } from "react";
 import { Header } from "@/components/site/header";
