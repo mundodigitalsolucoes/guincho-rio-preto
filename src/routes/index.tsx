@@ -113,8 +113,22 @@ function Page() {
       <main id="inicio" className="pt-[72px]">
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-hero text-white">
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{ backgroundImage: `url(${images.truck})`, backgroundSize: "cover", backgroundPosition: "center" }} />
-          <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+          {/* Speed lines for motion feeling */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 opacity-40">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <span
+                key={i}
+                className="animate-speed-line absolute h-[2px] rounded-full bg-white/70"
+                style={{
+                  top: `${10 + i * 11}%`,
+                  width: `${30 + (i % 4) * 15}%`,
+                  right: 0,
+                  animationDelay: `${(i * 0.15).toFixed(2)}s`,
+                }}
+              />
+            ))}
+          </div>
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-secondary/70 to-transparent" />
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
             <div className="flex flex-col justify-center">
               <div className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-secondary px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary shadow-card">
@@ -138,15 +152,23 @@ function Page() {
               </div>
             </div>
             <div className="relative hidden lg:block">
-              <div className="absolute -inset-4 rounded-3xl bg-secondary/40 blur-2xl" />
-              <img src={images.truck} alt="Guincho plataforma transportando veículo em Rio Preto" className="relative rounded-3xl object-cover shadow-brand" />
-              <div className="absolute -bottom-6 -left-6 rotate-[-4deg] rounded-2xl bg-secondary px-6 py-4 shadow-brand">
+              <img
+                src={images.truck}
+                alt="Caminhão guincho Rio Preto transportando veículo"
+                className="animate-truck-drive relative z-10 w-full drop-shadow-[0_25px_25px_rgba(0,0,0,0.4)]"
+              />
+              {/* Animated road */}
+              <div className="animate-road-dash absolute bottom-6 left-0 right-0 h-1 rounded-full opacity-80" />
+              {/* Motion blur trail */}
+              <div aria-hidden className="absolute bottom-8 left-0 h-16 w-32 -translate-x-4 rounded-full bg-white/20 blur-2xl" />
+              <div className="absolute -bottom-2 -left-2 z-20 rotate-[-4deg] rounded-2xl bg-secondary px-6 py-4 shadow-brand">
                 <div className="font-display text-3xl font-black leading-none text-primary">SOS</div>
                 <div className="font-display text-sm font-bold text-white">24 HORAS</div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* TRUST */}
         <section className="bg-muted/40 py-14">
