@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "guincho rio preto, guincho 24 horas, guincho são josé do rio preto, guincho para moto, guincho para carro, socorro automotivo, guincho plataforma, guincho asa delta" },
+      { name: "keywords", content: "guincho rio preto, guincho 24 horas, guincho são josé do rio preto, guincho para moto, guincho para carro, socorro automotivo, remoção de veículos" },
       { name: "robots", content: "index,follow" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
