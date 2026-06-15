@@ -290,7 +290,7 @@ function Page() {
           <div className="mx-auto max-w-4xl px-4 text-center">
             <SectionTitle eyebrow="Atendimento local" title="Guincho em São José do Rio Preto 24 Horas" />
             <p className="text-lg leading-relaxed text-muted-foreground text-balance">
-              Procurando <strong className="text-foreground">guincho em São José do Rio Preto</strong>? A Guincho Rio Preto é referência em <strong className="text-foreground">guincho 24 horas Rio Preto</strong>, com serviço de <strong className="text-foreground">guincho para moto</strong>, <strong className="text-foreground">guincho para carro</strong>, <strong className="text-foreground">socorro automotivo</strong>, <strong className="text-foreground">guincho plataforma</strong> e <strong className="text-foreground">guincho asa delta</strong>. Atendemos toda a região com agilidade e segurança, todos os dias, a qualquer hora.
+              Procurando <strong className="text-foreground">guincho em São José do Rio Preto</strong>? A Guincho Rio Preto é referência em <strong className="text-foreground">guincho 24 horas Rio Preto</strong>, com serviço de <strong className="text-foreground">guincho para moto</strong>, <strong className="text-foreground">guincho para carro</strong>, <strong className="text-foreground">socorro automotivo</strong> e <strong className="text-foreground">remoção de veículos</strong>. Atendemos toda a região com agilidade e segurança, todos os dias, a qualquer hora.
             </p>
             <div className="mt-8">
               <WhatsAppButton size="lg" label="Falar com a equipe agora" event="cta_click" />
