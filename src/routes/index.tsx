@@ -235,8 +235,9 @@ function Page() {
           <div className="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
             <div className="grid grid-cols-2 gap-4">
               <img src={images.moto} alt="Guincho transportando moto em Rio Preto" className="aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
-              <img src={images.suv} alt="Guincho asa delta atendendo SUV" className="mt-8 aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
+              <img src={images.carNight} alt="Guincho atendendo carro à noite em Rio Preto" className="mt-8 aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
             </div>
+
             <div>
               <SectionTitle align="left" eyebrow="Sobre nós" title="Confiança e agilidade quando você mais precisa" />
               <p className="text-lg text-muted-foreground">
