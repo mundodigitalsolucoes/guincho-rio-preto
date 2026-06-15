@@ -379,12 +379,13 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <img src={images.logo} alt="Guincho Rio Preto" className="h-12 w-12 rounded-lg object-cover" />
-            <div>
-              <div className="font-display text-xl font-black">GUINCHO</div>
-              <div className="font-display text-sm font-bold text-primary">RIO PRETO</div>
-            </div>
-          </div>
+           <div className="flex items-center">
+  <img
+    src={images.logo}
+    alt="Guincho Rio Preto"
+    className="h-16 w-auto max-w-[220px] object-contain"
+  />
+</div>
           <p className="mt-3 text-sm text-white/70">SOS 24 Horas — atendimento rápido e seguro.</p>
         </div>
         <div>
