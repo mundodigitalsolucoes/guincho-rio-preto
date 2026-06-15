@@ -1,8 +1,3 @@
-import logoAsset from "@/assets/logo.png.asset.json";
-import truckAsset from "@/assets/truck-nobg.png.asset.json";
-import motoAsset from "@/assets/moto-real.jpg.asset.json";
-import carNightAsset from "@/assets/car-night.jpg.asset.json";
-
 export const brand = {
   name: "Guincho Rio Preto",
   phone: "17 99623-8858",
@@ -15,8 +10,9 @@ export const waLink = `https://wa.me/5517996238858?text=${encodeURIComponent(bra
 export const telLink = `tel:${brand.phoneIntl}`;
 
 export const images = {
-  logo: logoAsset.url,
-  truck: truckAsset.url,
-  moto: motoAsset.url,
-  carNight: carNightAsset.url,
+  logo: "/assets/logo-guincho-rio-preto.png",
+  truck: "/assets/guincho.png",
+  moto: "/assets/guincho-moto.jpeg",
+  carNight: "/assets/guincho-carro-batido.jpeg",
+  service: "/assets/guincho-carro.png",
 };
