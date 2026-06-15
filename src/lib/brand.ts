@@ -1,7 +1,7 @@
 import logoAsset from "@/assets/logo.png.asset.json";
-import truckAsset from "@/assets/truck-red.jpg.asset.json";
-import motoAsset from "@/assets/moto.jpg.asset.json";
-import suvAsset from "@/assets/suv.jpg.asset.json";
+import truckAsset from "@/assets/truck-nobg.png.asset.json";
+import motoAsset from "@/assets/moto-real.jpg.asset.json";
+import carNightAsset from "@/assets/car-night.jpg.asset.json";
 
 export const brand = {
   name: "Guincho Rio Preto",
@@ -18,5 +18,5 @@ export const images = {
   logo: logoAsset.url,
   truck: truckAsset.url,
   moto: motoAsset.url,
-  suv: suvAsset.url,
+  carNight: carNightAsset.url,
 };
