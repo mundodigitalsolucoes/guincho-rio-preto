@@ -218,68 +218,36 @@ function Page() {
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-display text-xl font-bold uppercase">{w.title}</h3>
-                    <p className="text-sm text-white/80">{w.desc}</p>
+                    <p className="mt-1 text-sm text-white/70">{w.desc}</p>
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <WhatsAppButton size="lg" label="Chamar agora no WhatsApp" event="cta_click" />
-              <CallButton size="lg" />
             </div>
           </div>
         </section>
 
         {/* SOBRE */}
         <section id="sobre" className="py-20">
-          <div className="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
-            <div className="grid grid-cols-2 gap-4">
-              <img src={images.moto} alt="Guincho transportando moto em Rio Preto" className="aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
-              <img src={images.carNight} alt="Guincho atendendo carro à noite em Rio Preto" className="mt-8 aspect-[4/5] rounded-2xl object-cover shadow-card" loading="lazy" />
-            </div>
-
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
             <div>
-              <SectionTitle align="left" eyebrow="Sobre nós" title="Confiança e agilidade quando você mais precisa" />
-              <p className="text-lg text-muted-foreground">
-                A <strong className="text-foreground">Guincho Rio Preto</strong> atua com atendimento rápido, seguro e profissional em São José do Rio Preto e região, oferecendo suporte 24 horas para carros e motos. O foco é transportar seu veículo com cuidado, agilidade e total segurança.
-              </p>
-              <div className="mt-6 grid grid-cols-3 gap-4">
-                {[["24h","Atendimento"],["15min","Tempo médio"],["100%","Segurança"]].map(([n, l]) => (
-                  <div key={l} className="rounded-2xl border bg-card p-4 text-center shadow-card">
-                    <div className="font-display text-3xl font-black text-primary">{n}</div>
-                    <div className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{l}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <WhatsAppButton size="lg" />
-                <CallButton size="lg" label="Ligar agora" />
-              </div>
+              <SectionTitle align="left" eyebrow="Confiança e segurança" title="Atendimento rápido com cuidado no transporte" desc="A Guincho Rio Preto atua com atendimento rápido, seguro e profissional em São José do Rio Preto e região, oferecendo suporte 24 horas para carros e motos." />
+              <WhatsAppButton label="Falar com o guincho" event="cta_click" />
             </div>
+            <img src={images.service} alt="Guincho Rio Preto atendendo veículo" className="rounded-3xl shadow-brand" />
           </div>
         </section>
 
         {/* AVALIAÇÕES */}
         <section id="avaliacoes" className="bg-muted/40 py-20">
           <div className="mx-auto max-w-7xl px-4">
-            <SectionTitle eyebrow="Avaliações" title="Clientes que já foram socorridos" desc="Histórias reais de quem precisou e foi bem atendido." />
+            <SectionTitle eyebrow="Avaliações" title="Quem chamou, recomenda" desc="Prova social para reforçar confiança antes do contato." />
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {reviews.map((r) => (
-                <div key={r.name} className="flex flex-col rounded-2xl border bg-card p-6 shadow-card">
-                  <div className="mb-3 flex gap-0.5 text-primary">
-                    {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
-                  </div>
-                  <p className="flex-1 text-foreground">"{r.text}"</p>
-                  <div className="mt-4 flex items-center gap-3">
-                    <div className="grid h-10 w-10 place-items-center rounded-full bg-primary font-bold text-primary-foreground">
-                      {r.name[0]}
-                    </div>
-                    <div>
-                      <div className="font-semibold">{r.name}</div>
-                      <div className="text-xs text-muted-foreground">Cliente verificado</div>
-                    </div>
-                  </div>
-                </div>
+                <article key={r.name} className="rounded-2xl border bg-card p-6 shadow-card">
+                  <div className="mb-3 flex gap-1 text-primary">{Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+                  <p className="text-muted-foreground">“{r.text}”</p>
+                  <div className="mt-4 font-bold">{r.name}</div>
+                </article>
               ))}
             </div>
           </div>
@@ -288,13 +256,10 @@ function Page() {
         {/* SEO LOCAL */}
         <section className="py-20">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <SectionTitle eyebrow="Atendimento local" title="Guincho em São José do Rio Preto 24 Horas" />
-            <p className="text-lg leading-relaxed text-muted-foreground text-balance">
-              Procurando <strong className="text-foreground">guincho em São José do Rio Preto</strong>? A Guincho Rio Preto é referência em <strong className="text-foreground">guincho 24 horas Rio Preto</strong>, com serviço de <strong className="text-foreground">guincho para moto</strong>, <strong className="text-foreground">guincho para carro</strong>, <strong className="text-foreground">socorro automotivo</strong> e <strong className="text-foreground">remoção de veículos</strong>. Atendemos toda a região com agilidade e segurança, todos os dias, a qualquer hora.
+            <SectionTitle eyebrow="SEO local" title="Guincho em São José do Rio Preto 24 Horas" />
+            <p className="text-lg text-muted-foreground">
+              Se você precisa de guincho em São José do Rio Preto, guincho 24 horas Rio Preto, guincho para moto, guincho para carro, socorro automotivo, guincho plataforma ou remoção de veículos, fale com o Guincho Rio Preto pelo WhatsApp.
             </p>
-            <div className="mt-8">
-              <WhatsAppButton size="lg" label="Falar com a equipe agora" event="cta_click" />
-            </div>
           </div>
         </section>
 
@@ -378,14 +343,13 @@ function Footer() {
     <footer className="bg-secondary py-12 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-3">
-           <div className="flex items-center">
-  <img
-    src={images.logo}
-    alt="Guincho Rio Preto"
-    className="h-16 w-auto max-w-[220px] object-contain"
-  />
-</div>
+          <div className="flex items-center">
+            <img
+              src={images.logo}
+              alt="Guincho Rio Preto"
+              className="h-16 w-auto max-w-[220px] object-contain"
+            />
+          </div>
           <p className="mt-3 text-sm text-white/70">SOS 24 Horas — atendimento rápido e seguro.</p>
         </div>
         <div>
