@@ -10,6 +10,8 @@ export default defineConfig({
   vite: {
     preview: {
       allowedHosts: [
+        "guinchoriopreto.com.br",
+        "www.guinchoriopreto.com.br",
         "lollyuoz5x8swg0vydhmid6j.76.13.226.201.sslip.io",
         ".sslip.io",
       ],
