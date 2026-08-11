@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Clock, Shield, MapPin, CreditCard, Bike, Car, Truck, AlertTriangle,
-  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle,
+  Battery, Wrench, ChevronDown, Star, Phone, MessageCircle, Mail,
 } from "lucide-react";
 import { useState } from "react";
 import { Header } from "@/components/site/header";
@@ -20,11 +20,15 @@ const schema = {
   name: "Guincho Rio Preto",
   image: images.logo,
   telephone: "+5517996238858",
-  priceRange: "$$",
+  email: "guinchoriopreto.com.br@gmail.com",
+  taxID: "65.195.305/0001-41",
+  priceRange: "$",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Rua Dorvalino Donega, 782 - Parque Residencial Edson Baffi",
     addressLocality: "São José do Rio Preto",
     addressRegion: "SP",
+    postalCode: "15047-759",
     addressCountry: "BR",
   },
   areaServed: "São José do Rio Preto e região",
@@ -293,8 +297,10 @@ function Footer() {
           <ul className="mt-3 space-y-2 text-sm text-white/80">
             <li><a href={telLink} data-event="call_click" className="inline-flex items-center gap-2 hover:text-primary"><Phone className="h-4 w-4" /> {brand.phone}</a></li>
             <li><a href={waLink} target="_blank" rel="noopener" data-event="whatsapp_click" className="inline-flex items-center gap-2 hover:text-primary"><MessageCircle className="h-4 w-4" /> WhatsApp</a></li>
-            <li className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> {brand.city}</li>
-            <li className="inline-flex items-center gap-2"><Clock className="h-4 w-4" /> Atendimento 24 horas</li>
+            <li><a href="mailto:guinchoriopreto.com.br@gmail.com" className="inline-flex items-start gap-2 break-all hover:text-primary"><Mail className="mt-0.5 h-4 w-4 shrink-0" /> guinchoriopreto.com.br@gmail.com</a></li>
+            <li className="inline-flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Rua Dorvalino Donega, 782<br />Parque Residencial Edson Baffi<br />São José do Rio Preto – SP<br />CEP 15047-759</span></li>
+            <li className="inline-flex items-center gap-2"><Clock className="h-4 w-4 shrink-0" /> Atendimento 24 horas</li>
+            <li><span className="font-semibold text-white">CNPJ:</span> 65.195.305/0001-41</li>
           </ul>
         </div>
         <div>
